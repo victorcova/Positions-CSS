@@ -1,0 +1,64 @@
+/*
+- Propriedades Position: Top / bottom / right / left
+- Tipos de Position: static / Fixed / Relative / Absolute / Sticky
+*/
+
+/* Reset no CSS: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+}
+
+.container{
+    /* STATIC (não usa): Nem precisa declarar. O static é sempre default. 
+    Segue o fluxo normal da página - Não funciona: Top / bottom / right / left */    
+    /* position: static;  */
+
+    /* FIXED (preso): Fica fixo posicionado ao ViewPort - Se a página rolar para baixo ele vai junto.
+    Funciona: Top / bottom / right / left  */
+    /* position: fixed;
+    top: 50px;
+    left: 150px; */
+
+    /* STICKY (preso+scroll): Parecido com o fixed. É posicionado com base na posição de rolagem. 
+    Sobe na tela até chegar na posição do elemento - a partir daí ele fica fixo.
+    Funciona: Top / bottom / right / left  */
+    /* position: sticky;
+    margin-top: 20vh;
+    top:0; */
+
+    /* RELATIVE (normal+TBLR): Fica no seu bloco de posição normal. é ajustado por: Top / bottom / right / left 
+    
+    */
+     /* position: relative;
+     top: 150px;
+     left: 200px;
+     margin-top: 20vh; */
+
+    /* ABSOLUTE (filho de relative): é posicionado em relação ao elemento RELATIVE mais próximo (caso não se tenha definido seguirá o <body> que é default RELATIVE).
+    Existe uma regra de hierárquia: O ABSOLUTE é sempre filho de RELATIVE.
+    Funciona: Top / bottom / right / left */
+    /* position: relative;
+    margin-top: 30vh; */
+
+
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+
+.box{
+    /* position: fixed; */
+    position: absolute;
+    top: 0px;    
+
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+}
